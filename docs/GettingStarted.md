@@ -56,7 +56,7 @@ Here is an example minimal App.js
 
 ```js
 import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import MapLibreGL from '@maplibre/maplibre-react-native';
 
 // Will be null for most users (only Mapbox authenticates this way).
@@ -73,6 +73,8 @@ const styles = StyleSheet.create({
   map: {
     flex: 1,
     alignSelf: 'stretch',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
   },
 });
 
